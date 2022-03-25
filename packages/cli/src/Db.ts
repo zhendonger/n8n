@@ -39,6 +39,8 @@ export const collections: IDatabaseCollections = {
 	SharedCredentials: null,
 	SharedWorkflow: null,
 	Settings: null,
+	InstalledPackages: null,
+	InstalledNodes: null,
 };
 
 let connection: Connection;
@@ -201,6 +203,9 @@ export async function init(
 	collections.SharedCredentials = linkRepository(entities.SharedCredentials);
 	collections.SharedWorkflow = linkRepository(entities.SharedWorkflow);
 	collections.Settings = linkRepository(entities.Settings);
+
+	collections.InstalledPackages = linkRepository(entities.InstalledPackages);
+	collections.InstalledNodes = linkRepository(entities.InstalledNodes);
 
 	return collections;
 }
