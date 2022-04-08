@@ -20,9 +20,9 @@ import {
 import {
 	writeFile as fsWriteFile,
 } from 'fs';
+import getSystemFonts from 'get-system-fonts';
 import { promisify } from 'util';
 const fsWriteFileAsync = promisify(fsWriteFile);
-import * as getSystemFonts from 'get-system-fonts';
 
 
 const nodeOperations: INodePropertyOptions[] = [
